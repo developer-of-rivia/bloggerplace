@@ -41,20 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	document.querySelectorAll('.join__text').forEach(el => {
 		let simpleBar = new SimpleBar(el)
-
-		// scroll click
-		var scrollButtonTop = document.getElementById('join__scrollbuts-top');
-		var scrollButtonBottom = document.getElementById('join__scrollbuts-bottom');
-		var joinText = document.getElementById('join__text');
-
-		scrollButtonTop.addEventListener('click', function() {
-			simpleBar.getScrollElement().scrollTop -= 15;
-		});
-
-		scrollButtonBottom.addEventListener('click', function() {
-			simpleBar.getScrollElement().scrollTop += 15;
-		});
-
 	});
 
 
@@ -133,6 +119,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+	// swiper
+	const joinSlider = new Swiper('.join__slider', {
+		// Optional parameters
+		direction: 'vertical',
+		loop: false,
+		slidesPerView: 1,
+		centeredSlides: false,
+		touchRatio: false,
+		// Navigation arrows
+		navigation: {
+			nextEl: '#join__scrollbuts-bottom',
+			prevEl: '#join__scrollbuts-top',
+		},
+	});
+
+
+
 	window.onload = function() {
 		// preloader
 		document.querySelector('#preloader').style.display = 'none';
@@ -146,21 +150,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	// modals
-	// const modals = document.querySelectorAll('[data-modal]');
-	// modals.forEach(function (trigger) {
-	// 	trigger.addEventListener('click', function (event) {
-	// 		event.preventDefault();
-	// 		const modal = document.getElementById(trigger.dataset.modal);
-	// 		modal.classList.add('open');
-	// 		const exits = modal.querySelectorAll('.modal-exit');
-	// 		exits.forEach(function (exit) {
-	// 		exit.addEventListener('click', function (event) {
-	// 			event.preventDefault();
-	// 			modal.classList.remove('open');
-	// 		});
-	// 		});
-	// 	});
-	// });
+	const modals = document.querySelectorAll('[data-modal]');
+	modals.forEach(function (trigger) {
+		trigger.addEventListener('click', function (event) {
+			event.preventDefault();
+			const modal = document.getElementById(trigger.dataset.modal);
+			modal.classList.add('open');
+			const exits = modal.querySelectorAll('.modal-exit');
+			exits.forEach(function (exit) {
+			exit.addEventListener('click', function (event) {
+				event.preventDefault();
+				modal.classList.remove('open');
+			});
+			});
+		});
+	});
 
     
 })

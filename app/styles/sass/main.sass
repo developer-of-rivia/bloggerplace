@@ -14,6 +14,8 @@ img
 body, html
     overflow-x: hidden
     scroll-behavior: smooth
+    position: static !important
+    overflow-y: visible !important
 /* LAYOUT */
 .container
     max-width: 1140px
@@ -76,6 +78,8 @@ body, html
         font-size: 40px
     +sm
         font-size: 28px
+    +xs
+        font-size: 24px
 .button
     outline: none
     border: none
@@ -1183,7 +1187,7 @@ body, html
     position: relative
     margin-top: -50px
     z-index: 0
-    +xs
+    +sm
         padding-top: 130px
     .simplebar-track
         background-color: #282828 !important
@@ -1196,14 +1200,37 @@ body, html
 .join__title
     margin-bottom: 18px
     text-align: center
+    span
+        position: relative
+        font-family: 'NeueMachina'
+        span
+            position: relative
+            z-index: 2
+        &:before
+            content: ''
+            position: absolute
+            height: 20px
+            width: 100%
+            left: 0
+            bottom: 0
+            background: #B9FF66
+            z-index: -1
+            +sm
+                height: 12px
 .join__subtitle
     text-align: center
     font-weight: 500
     font-size: 22px
     color: #9C9C9C
     margin-bottom: 55px
+    +sm
+        font-size: 18px
+    +xs
+        font-size: 16px
 .join__faces-box
     display: flex
+    +sm
+        justify-content: center
     img
         border: 5px solid #333
         border-radius: 50px
@@ -1215,15 +1242,19 @@ body, html
     display: flex
     width: 100%
     border-radius: 35px
-    background: url(../images/dist/join-bg.pngg) no-repeat 250px bottom, #333
+    background: url(../images/dist/join-bg.png) no-repeat 310px calc(100% + 7px), #333
     padding: 50px
     justify-content: space-between
+    padding-left: 20px
+    position: relative
     +lg
         padding: 40px
         padding-left: 25px
+        background-position-x: 240px
     +md
         flex-direction: column
         padding: 50px
+        background: #333
     +sm
         padding: 40px
     +xs
@@ -1237,10 +1268,15 @@ body, html
     gap: 26px
 .join__right
     width: 520px
+    overflow: hidden
+    max-height: 240px
+    align-self: flex-end
     +lg
         width: 430px
     +md
         width: 100%
+.join__slider
+    height: 240px
 .join__top
     margin-bottom: 23px
     display: flex
@@ -1258,6 +1294,8 @@ body, html
         max-width: 360px
     +md
         max-width: 510px
+    +xs
+        font-size: 14px
 .join__bottom
     display: flex
     justify-content: space-between
@@ -1270,6 +1308,16 @@ body, html
     border-radius: 10px
     width: 46px
     height: 130px
+    position: absolute
+    right: 50px
+    bottom: 50px
+    z-index: 10
+    +lg
+        right: 42px
+        bottom: 58px
+    +md
+        bottom: 67px
+        right: 50px
     +sm
         display: none
 .join__scrollbuts-button
@@ -1291,6 +1339,8 @@ body, html
     font-size: 22px
     font-weight: 500
     margin-bottom: 8px
+    +xs
+        gap: 16px
     +xxs
         font-size: 14px
 .join__wrapper-title
@@ -1301,7 +1351,19 @@ body, html
     font-family: 'NeueMachina'
     color: #fff
     +lg
-        font-size: 30px
+        font-size: 28px
+    +sm
+        text-align: center
+    +xs
+        font-size: 24px
+    span
+        font-weight: 500
+        font-size: 16px
+        color: #9C9C9C
+        display: inline-block
+        margin-left: 8px
+        +sm
+            display: none
 .join__human-subs
     display: inline-flex
     align-items: center
@@ -1912,47 +1974,19 @@ body, html
         color: #B9FF66
     +md
         font-size: 18px
-/* modal */
-/* modal */
-/* modal */
-.modal
-    width: 336px
-    border-radius: 36px
-    position: relative
-    padding: 20px
-    position: fixed
-    left: 50%
-    margin-left: -168px
-    top: 50%
-    background: #fff
-    text-align: center
-    z-index: 20
-    box-shadow: 0 0 12px rgba(0,0,0,0.3)
 
-    display: none
-.modal__close
-    position: absolute
-    right: 20px
-    top: 20px
-    cursor: pointer
-.modal__icon
-    width: 78px
-    height: 78px
-    display: inline-flex
-    justify-content: center
-    align-items: center
-    border-radius: 50px
-    background: #EEF9EC
-    margin-bottom: 30px
-.modal__title
-    margin-bottom: 10px
-    font-weight: 500
-    font-size: 18px
-    color: #1D202C
-.modal__text
-    color: #9C9C9C
-    font-weight: 500
-    font-size: 14px
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1986,15 +2020,3 @@ body, html
         background-color: #fff
 .merch .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before
     opacity: 1
-
-
-
-
-
-
-
-
-
-
-
-
