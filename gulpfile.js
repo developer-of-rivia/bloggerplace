@@ -26,6 +26,9 @@ import changed       from 'gulp-changed'
 import concat        from 'gulp-concat'
 import rsync         from 'gulp-rsync'
 import {deleteAsync} from 'del'
+import ggcmq from 'gulp-group-css-media-queries'
+
+
 
 function browsersync() {
 	browserSync.init({
@@ -84,6 +87,7 @@ function styles() {
 	return src([`app/styles/${preprocessor}/*.*`, `!app/styles/${preprocessor}/_*.*`])
 		.pipe(eval(`${preprocessor}glob`)())
 		.pipe(eval(preprocessor)({ 'include css': true }))
+		.pipe(ggcmq())
 		.pipe(postCss([
 			autoprefixer({ grid: 'autoplace', flexbox: false}),
 			cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
