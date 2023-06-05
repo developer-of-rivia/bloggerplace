@@ -863,6 +863,35 @@ body, html
     text-transform: uppercase
 .merch__box-wrap
     max-width: 100%
+// simplebar
+.merch .simplebar-track.simplebar-vertical
+    background-color: #013AE6
+    width: 20px
+.merch .simplebar-content-wrapper
+    padding-right: 15px
+.merch .simplebar-scrollbar::before
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    opacity: 1
+    background-color: #013AE6
+    border-radius: 5px
+    border-top-right-radius: 0
+    cursor: pointer
+    z-index: 9999
+.merch .simplebar-track.simplebar-vertical .simplebar-scrollbar::before
+    top: 0
+    bottom: 0
+.merch .merch .simplebar-scrollbar.simplebar-visible::before
+    opacity: 1
+.merch .steps
+    .simplebar-track.simplebar-vertical
+        background-color: #fff
+    .simplebar-scrollbar::before
+        background-color: #fff
+.merch .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before
+    opacity: 1
 /* trans */
 /* trans */
 /* trans */
@@ -1974,6 +2003,71 @@ body, html
         color: #B9FF66
     +md
         font-size: 18px
+/* alert */
+/* alert */
+/* alert */
+.alert
+    width: 336px
+    border-radius: 30px
+    background: #fff
+    padding: 30px
+    position: fixed
+    left: 50%
+    margin-left: -168px
+    top: 50%
+    z-index: 100
+    text-align: center
+    display: none
+.alert__title
+    color: #1D202C
+    font-weight: 500
+    font-size: 18px
+    margin-bottom: 10px
+.alert__text
+    font-size: 14px
+    font-weight: 500
+    color: #9C9C9C
+.alert__close
+    position: absolute
+    right: 20px
+    top: 20px
+.alert__icon
+    margin-bottom: 30px
+    border-radius: 50px
+    width: 78px
+    height: 78px
+    text-align: center
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    background: #EEF9EC
+/* modal */
+// .modal
+//     position: fixed
+//     z-index: 100
+//     height: 100%
+//     width: 100%
+//     top: 0
+//     left: 0
+//     justify-content: center
+//     align-items: center
+//     background: rgba(0,0,0,0.5)
+//     display: none
+// iframe
+//     max-width: 860px
+//     width: 100%
+//     height: 100% !important
+//     max-height: 400px
+//     height: auto
+// .modal__close
+//     position: absolute
+//     color: #fff
+//     top: 15px
+//     right: 30px
+//     font-size: 40px
+//     cursor: pointer
+// .modal_active
+//     display: flex
 
 
 
@@ -1983,40 +2077,56 @@ body, html
 
 
 
-
-
-
-
-
-
-
-
-// simplebar
-.merch .simplebar-track.simplebar-vertical
-    background-color: #013AE6
-    width: 20px
-.merch .simplebar-content-wrapper
-    padding-right: 15px
-.merch .simplebar-scrollbar::before
+// popup classes
+.modal
+    position: fixed
+    width: 100%
+    height: 100%
+    opacity: 0
+    visibility: hidden
+    transition: all 0.3s ease
+    top: 0
     left: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 100
+    padding: 0 50px
+    +sm
+        padding: 0 20px
+.modal__bg
+    position: absolute
+    background: rgba(0,0,0,0.7)
+    width: 100%
+    height: calc(100vh + 200px)
+    z-index: 11
     top: 0
-    right: 0
-    bottom: 0
+    left: 0
+.modal__wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    z-index: 12
+    width: 100%
+.modal__container
+    width: 100%
+.modal.open
+    visibility: visible
     opacity: 1
-    background-color: #013AE6
-    border-radius: 5px
-    border-top-right-radius: 0
+    transition-delay: 0s
+.modal__close
+    position: fixed
+    right: 15px
+    top: 15px
+    width: 30px
+    height: 30px
+    border: none
+    background: #fff
+    font-size: 30px
+    background: none
     cursor: pointer
-    z-index: 9999
-.merch .simplebar-track.simplebar-vertical .simplebar-scrollbar::before
-    top: 0
-    bottom: 0
-.merch .merch .simplebar-scrollbar.simplebar-visible::before
-    opacity: 1
-.merch .steps
-    .simplebar-track.simplebar-vertical
-        background-color: #fff
-    .simplebar-scrollbar::before
-        background-color: #fff
-.merch .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before
-    opacity: 1
+    color: #fff
+iframe
+    width: 100%
+    height: 400px

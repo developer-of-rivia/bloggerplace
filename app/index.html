@@ -19,9 +19,9 @@
     <!-- styles -->
 	<link rel="stylesheet" href="css/app.min.css">
 </head>
-<div id="preloader" class="visible">
+<!-- <div id="preloader" class="visible">
 	<div></div>
-</div>
+</div> -->
 <body>
 <!-- main -->
 <!-- main -->
@@ -827,7 +827,7 @@
                 <div class="ablogers-slider-srapper swiper-wrapper">
                     <div class="ablogers-slide swiper-slide">
                         <img data-src="images/dist/ablogers-img1.png" class="lazyload">
-                        <div class="ablogers-slide__play">
+                        <div class="ablogers-slide__play" data-modal="youtube-1">
                             <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 3.54549V27.1847C2 28.6063 3.61902 29.5095 4.95233 28.828L28.5615 16.7337C29.7158 16.1427 29.7158 14.5875 28.5615 13.9965L4.95233 1.90215C3.61902 1.22069 2 2.12387 2 3.54549Z" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
                             </svg>                                                              
@@ -835,7 +835,7 @@
                     </div>
                     <div class="ablogers-slide swiper-slide">
                         <img data-src="images/dist/ablogers-img2.png" class="lazyload">
-                        <div class="ablogers-slide__play">
+                        <div class="ablogers-slide__play" data-modal="youtube-2">
                             <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 3.54549V27.1847C2 28.6063 3.61902 29.5095 4.95233 28.828L28.5615 16.7337C29.7158 16.1427 29.7158 14.5875 28.5615 13.9965L4.95233 1.90215C3.61902 1.22069 2 2.12387 2 3.54549Z" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
                             </svg>                                                              
@@ -1160,25 +1160,49 @@
         </div>
     </div>
 </footer>
-<!-- modal -->
-<div class="modal">
-    <div class="modal__close">
+<!-- alert -->
+<!-- alert -->
+<!-- alert -->
+<div class="alert">
+    <div class="alert__close">
         <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.5 1L1.5 13M1.5 1L13.5 13" stroke="#1D202C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>            
     </div>
-    <div class="modal__icon">
+    <div class="alert__icon">
         <img src="images/dist/smile-icon.svg">
     </div>
-    <div class="modal__title">
+    <div class="alert__title">
         Подождите, идет отправка
     </div>
-    <div class="modal__text">
+    <div class="alert__text">
         В ближайшее время с вами свяжется наш менеджер, ответит на все ваши вопросы и поможет разобраться с платформой BARTER
     </div>
 </div>
 
 
+
+<!-- modals -->
+<div class="modal modal1" id="youtube-1">
+    <div class="modal__bg"></div>
+    <div class="modal__wrapper">
+        <div class="modal__container">
+            <button class="modal__close modal-exit">X</button>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- modals -->
+<div class="modal modal1" id="youtube-2">
+    <div class="modal__bg"></div>
+    <div class="modal__wrapper">
+        <div class="modal__container">
+            <button class="modal__close modal-exit">X</button>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
 
 
 

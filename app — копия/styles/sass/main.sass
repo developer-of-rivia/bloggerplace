@@ -78,6 +78,8 @@ body, html
         font-size: 40px
     +sm
         font-size: 28px
+    +xs
+        font-size: 24px
 .button
     outline: none
     border: none
@@ -861,6 +863,35 @@ body, html
     text-transform: uppercase
 .merch__box-wrap
     max-width: 100%
+// simplebar
+.merch .simplebar-track.simplebar-vertical
+    background-color: #013AE6
+    width: 20px
+.merch .simplebar-content-wrapper
+    padding-right: 15px
+.merch .simplebar-scrollbar::before
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    opacity: 1
+    background-color: #013AE6
+    border-radius: 5px
+    border-top-right-radius: 0
+    cursor: pointer
+    z-index: 9999
+.merch .simplebar-track.simplebar-vertical .simplebar-scrollbar::before
+    top: 0
+    bottom: 0
+.merch .merch .simplebar-scrollbar.simplebar-visible::before
+    opacity: 1
+.merch .steps
+    .simplebar-track.simplebar-vertical
+        background-color: #fff
+    .simplebar-scrollbar::before
+        background-color: #fff
+.merch .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before
+    opacity: 1
 /* trans */
 /* trans */
 /* trans */
@@ -1221,8 +1252,14 @@ body, html
     font-size: 22px
     color: #9C9C9C
     margin-bottom: 55px
+    +sm
+        font-size: 18px
+    +xs
+        font-size: 16px
 .join__faces-box
     display: flex
+    +sm
+        justify-content: center
     img
         border: 5px solid #333
         border-radius: 50px
@@ -1238,12 +1275,15 @@ body, html
     padding: 50px
     justify-content: space-between
     padding-left: 20px
+    position: relative
     +lg
         padding: 40px
         padding-left: 25px
+        background-position-x: 240px
     +md
         flex-direction: column
         padding: 50px
+        background: #333
     +sm
         padding: 40px
     +xs
@@ -1257,10 +1297,15 @@ body, html
     gap: 26px
 .join__right
     width: 520px
+    overflow: hidden
+    max-height: 240px
+    align-self: flex-end
     +lg
         width: 430px
     +md
         width: 100%
+.join__slider
+    height: 240px
 .join__top
     margin-bottom: 23px
     display: flex
@@ -1278,6 +1323,8 @@ body, html
         max-width: 360px
     +md
         max-width: 510px
+    +xs
+        font-size: 14px
 .join__bottom
     display: flex
     justify-content: space-between
@@ -1290,6 +1337,16 @@ body, html
     border-radius: 10px
     width: 46px
     height: 130px
+    position: absolute
+    right: 50px
+    bottom: 50px
+    z-index: 10
+    +lg
+        right: 42px
+        bottom: 58px
+    +md
+        bottom: 67px
+        right: 50px
     +sm
         display: none
 .join__scrollbuts-button
@@ -1311,6 +1368,8 @@ body, html
     font-size: 22px
     font-weight: 500
     margin-bottom: 8px
+    +xs
+        gap: 16px
     +xxs
         font-size: 14px
 .join__wrapper-title
@@ -1321,13 +1380,19 @@ body, html
     font-family: 'NeueMachina'
     color: #fff
     +lg
-        font-size: 30px
+        font-size: 28px
+    +sm
+        text-align: center
+    +xs
+        font-size: 24px
     span
         font-weight: 500
         font-size: 16px
         color: #9C9C9C
         display: inline-block
         margin-left: 8px
+        +sm
+            display: none
 .join__human-subs
     display: inline-flex
     align-items: center
@@ -1938,49 +2003,68 @@ body, html
         color: #B9FF66
     +md
         font-size: 18px
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// simplebar
-.merch .simplebar-track.simplebar-vertical
-    background-color: #013AE6
-    width: 20px
-.merch .simplebar-content-wrapper
-    padding-right: 15px
-.merch .simplebar-scrollbar::before
+/* alert */
+/* alert */
+/* alert */
+.alert
+    width: 336px
+    border-radius: 30px
+    background: #fff
+    padding: 30px
+    position: fixed
+    left: 50%
+    margin-left: -168px
+    top: 50%
+    z-index: 100
+    text-align: center
+    display: none
+.alert__title
+    color: #1D202C
+    font-weight: 500
+    font-size: 18px
+    margin-bottom: 10px
+.alert__text
+    font-size: 14px
+    font-weight: 500
+    color: #9C9C9C
+.alert__close
+    position: absolute
+    right: 20px
+    top: 20px
+.alert__icon
+    margin-bottom: 30px
+    border-radius: 50px
+    width: 78px
+    height: 78px
+    text-align: center
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    background: #EEF9EC
+/* modal */
+.modal
+    position: fixed
+    z-index: 100
+    height: 100%
+    width: 100%
+    top: 0
     left: 0
-    top: 0
-    right: 0
-    bottom: 0
-    opacity: 1
-    background-color: #013AE6
-    border-radius: 5px
-    border-top-right-radius: 0
+    justify-content: center
+    align-items: center
+    background: rgba(0,0,0,0.5)
+    display: none
+iframe
+    max-width: 860px
+    width: 100%
+    height: 100% !important
+    max-height: 400px
+    height: auto
+.modal__close
+    position: absolute
+    color: #fff
+    top: 15px
+    right: 30px
+    font-size: 40px
     cursor: pointer
-    z-index: 9999
-.merch .simplebar-track.simplebar-vertical .simplebar-scrollbar::before
-    top: 0
-    bottom: 0
-.merch .merch .simplebar-scrollbar.simplebar-visible::before
-    opacity: 1
-.merch .steps
-    .simplebar-track.simplebar-vertical
-        background-color: #fff
-    .simplebar-scrollbar::before
-        background-color: #fff
-.merch .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before
-    opacity: 1
+.modal_active
+    display: flex
