@@ -2075,9 +2075,9 @@ body, html
     align-items: center
     position: relative
     z-index: 12
-    width: 100%
 .modal__container
-    width: 100%
+    display: flex
+    justify-content: center
 .modal.open
     visibility: visible
     opacity: 1
@@ -2094,6 +2094,19 @@ body, html
     background: none
     cursor: pointer
     color: #fff
-iframe
-    width: 100%
-    height: 400px
+.modal iframe
+    height: 510px
+    width: 880px
+    +md
+        width: 660px
+        height: 400px
+    +sm
+        width: 500px
+        height: 280px
+    +xs
+        width: 350px
+        height: 200px
+.modal video
+    border-radius: 35px
+.youtube-video_hidden
+    display: none

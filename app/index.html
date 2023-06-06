@@ -827,7 +827,7 @@
                 <div class="ablogers-slider-srapper swiper-wrapper">
                     <div class="ablogers-slide swiper-slide">
                         <img data-src="images/dist/ablogers-img1.png" class="lazyload">
-                        <div class="ablogers-slide__play" data-modal="youtube-1">
+                        <div class="ablogers-slide__play" data-modal="stories-1">
                             <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 3.54549V27.1847C2 28.6063 3.61902 29.5095 4.95233 28.828L28.5615 16.7337C29.7158 16.1427 29.7158 14.5875 28.5615 13.9965L4.95233 1.90215C3.61902 1.22069 2 2.12387 2 3.54549Z" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
                             </svg>                                                              
@@ -835,7 +835,7 @@
                     </div>
                     <div class="ablogers-slide swiper-slide">
                         <img data-src="images/dist/ablogers-img2.png" class="lazyload">
-                        <div class="ablogers-slide__play" data-modal="youtube-2">
+                        <div class="ablogers-slide__play" data-modal="stories-2">
                             <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 3.54549V27.1847C2 28.6063 3.61902 29.5095 4.95233 28.828L28.5615 16.7337C29.7158 16.1427 29.7158 14.5875 28.5615 13.9965L4.95233 1.90215C3.61902 1.22069 2 2.12387 2 3.54549Z" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
                             </svg>                                                              
@@ -980,7 +980,7 @@
                     <div class="youtube-slider-srapper swiper-wrapper">
                         <div class="youtube__item-wrapper swiper-slide">
                             <div class="youtube__item" style="background-image: url(images/dist/youtube-img1.png)">
-                                <a href="#" class="youtube__item-button">
+                                <a href="#" class="youtube__item-button" data-modal="youtube-1">
                                     <span>Смотреть</span>
                                     <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 2.66204V17.3366C1 18.2191 1.86023 18.7797 2.56866 18.3567L15.1128 10.8489C15.7261 10.482 15.7261 9.51656 15.1128 9.1497L2.56866 1.64191C1.86023 1.21887 1 1.77954 1 2.66204Z" stroke="white" stroke-miterlimit="10"/>
@@ -990,7 +990,7 @@
                         </div>
                         <div class="youtube__item-wrapper swiper-slide">
                             <div class="youtube__item" style="background-image: url(images/dist/youtube-img1.png)">
-                                <a href="#" class="youtube__item-button">
+                                <a href="#" class="youtube__item-button" data-modal="youtube-1">
                                     <span>Смотреть</span>
                                     <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 2.66204V17.3366C1 18.2191 1.86023 18.7797 2.56866 18.3567L15.1128 10.8489C15.7261 10.482 15.7261 9.51656 15.1128 9.1497L2.56866 1.64191C1.86023 1.21887 1 1.77954 1 2.66204Z" stroke="white" stroke-miterlimit="10"/>
@@ -1000,7 +1000,7 @@
                         </div>
                         <div class="youtube__item-wrapper swiper-slide">
                             <div class="youtube__item" style="background-image: url(images/dist/youtube-img1.png)">
-                                <a href="#" class="youtube__item-button">
+                                <a href="#" class="youtube__item-button" data-modal="youtube-1">
                                     <span>Смотреть</span>
                                     <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 2.66204V17.3366C1 18.2191 1.86023 18.7797 2.56866 18.3567L15.1128 10.8489C15.7261 10.482 15.7261 9.51656 15.1128 9.1497L2.56866 1.64191C1.86023 1.21887 1 1.77954 1 2.66204Z" stroke="white" stroke-miterlimit="10"/>
@@ -1182,24 +1182,45 @@
 
 
 
-<!-- modals -->
+<!-- stories -->
+<div class="modal modal1" id="stories-1">
+    <div class="modal__bg"></div>
+    <div class="modal__wrapper">
+        <div class="modal__container">
+            <button class="modal__close modal-exit">X</button>
+            <video class="stories-video" controls src="stories/video_2022-10-22_10-27-36.mp4"></video>
+        </div>
+    </div>
+</div>
+<!-- stories -->
+<div class="modal modal2" id="stories-2">
+    <div class="modal__bg"></div>
+    <div class="modal__wrapper">
+        <div class="modal__container">
+            <button class="modal__close modal-exit">X</button>
+            <video class="stories-video" controls src="stories/video_2022-10-22_10-27-36.mp4"></video>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- youtubes -->
 <div class="modal modal1" id="youtube-1">
     <div class="modal__bg"></div>
     <div class="modal__wrapper">
         <div class="modal__container">
             <button class="modal__close modal-exit">X</button>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/25BkVBgFD9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
 </div>
-
-<!-- modals -->
 <div class="modal modal1" id="youtube-2">
     <div class="modal__bg"></div>
     <div class="modal__wrapper">
         <div class="modal__container">
             <button class="modal__close modal-exit">X</button>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/25BkVBgFD9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
 </div>
@@ -1207,8 +1228,8 @@
 
 
 
-
-
+<!-- youtube api -->
+<script src="https://www.youtube.com/iframe_api"></script>
 <!-- lazysizes -->
 <script src='js/lazysizes.min.js'></script>
 <!-- simplebar -->

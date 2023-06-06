@@ -1,8 +1,4 @@
-// // Import vendor jQuery plugin example
-// import '~/app/libs/mmenu/dist/mmenu.js'
-
 document.addEventListener('DOMContentLoaded', () => {
-
 	// menu
 	let menuList = document.querySelector('.menu__list');
 	let burger = document.querySelector('.header__burger');
@@ -32,13 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.querySelectorAll('.merch__box-wrap').forEach(el => {
 		new SimpleBar(el)
 	});
-
-
 	document.querySelectorAll('.amedia__box-wrap').forEach(el => {
 		new SimpleBar(el)
 	});
-
-
 	document.querySelectorAll('.join__text').forEach(el => {
 		let simpleBar = new SimpleBar(el)
 	});
@@ -74,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	if (document.documentElement.clientWidth < 500) {
-
 		function wrapEveryTwoElements(selector) {
 			const elements = document.querySelectorAll(selector);
 			for (let i = 0; i < elements.length; i += 2) {
@@ -149,24 +140,49 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 
-	// modals
+
+
+
+	// modalsкак поставить видео с ютуба на паузу
 	const modals = document.querySelectorAll('[data-modal]');
 	modals.forEach(function (trigger) {
 		trigger.addEventListener('click', function (event) {
 			event.preventDefault();
 			const modal = document.getElementById(trigger.dataset.modal);
 			modal.classList.add('open');
+			if(modal.querySelector('.stories-video')){
+				modal.querySelector('.stories-video').play();
+			}
+			if(modal.querySelector('.youtube-video')){
+				modal.querySelector('.youtube-video').classList.remove('youtube-video_hidden');
+			}
 			const exits = modal.querySelectorAll('.modal-exit');
 			exits.forEach(function (exit) {
 			exit.addEventListener('click', function (event) {
 				event.preventDefault();
 				modal.classList.remove('open');
+				if(modal.querySelector('.stories-video')){
+					modal.querySelector('.stories-video').pause();
+				}
+				if(modal.querySelector('.youtube-video')){
+					modal.querySelector('.youtube-video').classList.add('youtube-video_hidden');
+				}
 			});
 			});
 		});
 	});
 
-
+	let modalBg = document.querySelectorAll('.modal__bg');
+	let storiesVideo = document.querySelectorAll('.stories-video');
+	let modalss = document.querySelectorAll('.modal');
+	for(let i = 0; i < modalBg.length; i++){
+		modalBg[i].addEventListener('click', function(){
+			if(storiesVideo[i]){
+				storiesVideo[i].pause();
+			}
+			modalss[i].classList.remove('open');
+		});
+	}
 
     
 })
