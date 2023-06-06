@@ -18,6 +18,31 @@
     <link rel="stylesheet" href="css/animate.min.css">
     <!-- styles -->
 	<link rel="stylesheet" href="css/app.min.css">
+    <!-- youtube api -->
+    <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
+    <script>
+    //     var tag = document.createElement('script');
+    //     tag.src = "https://www.youtube.com/iframe_api";
+    //     var firstScriptTag = document.getElementsByTagName('script')[0];
+    //     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+    
+    //     function onPlayerReady(event) {
+    //         event.target.playVideo();
+    //     }
+    
+    
+    //     var done = false;
+    //     function onPlayerStateChange(event) {
+    //         if (event.data == YT.PlayerState.PLAYING && !done) {
+    //             setTimeout(stopVideo, 6000);
+    //             done = true;
+    //         }
+    //     }
+    //     function stopVideo() {
+    //         player.stopVideo();
+    //     }
+    // </script>
 </head>
 <!-- <div id="preloader" class="visible">
 	<div></div>
@@ -843,7 +868,7 @@
                     </div>
                     <div class="ablogers-slide swiper-slide">
                         <img data-src="images/dist/ablogers-img3.png" class="lazyload">
-                        <div class="ablogers-slide__play">
+                        <div class="ablogers-slide__play" data-modal="stories-3">
                             <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 3.54549V27.1847C2 28.6063 3.61902 29.5095 4.95233 28.828L28.5615 16.7337C29.7158 16.1427 29.7158 14.5875 28.5615 13.9965L4.95233 1.90215C3.61902 1.22069 2 2.12387 2 3.54549Z" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
                             </svg>                                                              
@@ -851,7 +876,7 @@
                     </div>
                     <div class="ablogers-slide swiper-slide">
                         <img data-src="images/dist/ablogers-img4.png" class="lazyload">
-                        <div class="ablogers-slide__play">
+                        <div class="ablogers-slide__play" data-modal="stories-4">
                             <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 3.54549V27.1847C2 28.6063 3.61902 29.5095 4.95233 28.828L28.5615 16.7337C29.7158 16.1427 29.7158 14.5875 28.5615 13.9965L4.95233 1.90215C3.61902 1.22069 2 2.12387 2 3.54549Z" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
                             </svg>                                                              
@@ -859,7 +884,7 @@
                     </div>
                     <div class="ablogers-slide swiper-slide">
                         <img data-src="images/dist/ablogers-img5.png" class="lazyload">
-                        <div class="ablogers-slide__play">
+                        <div class="ablogers-slide__play" data-modal="stories-5">
                             <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 3.54549V27.1847C2 28.6063 3.61902 29.5095 4.95233 28.828L28.5615 16.7337C29.7158 16.1427 29.7158 14.5875 28.5615 13.9965L4.95233 1.90215C3.61902 1.22069 2 2.12387 2 3.54549Z" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
                             </svg>                                                              
@@ -867,7 +892,7 @@
                     </div>
                     <div class="ablogers-slide swiper-slide">
                         <img data-src="images/dist/ablogers-img1.png" class="lazyload">
-                        <div class="ablogers-slide__play">
+                        <div class="ablogers-slide__play" data-modal="stories-6">
                             <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 3.54549V27.1847C2 28.6063 3.61902 29.5095 4.95233 28.828L28.5615 16.7337C29.7158 16.1427 29.7158 14.5875 28.5615 13.9965L4.95233 1.90215C3.61902 1.22069 2 2.12387 2 3.54549Z" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
                             </svg>                                                              
@@ -875,7 +900,7 @@
                     </div>
                     <div class="ablogers-slide swiper-slide">
                         <img data-src="images/dist/ablogers-img2.png" class="lazyload">
-                        <div class="ablogers-slide__play">
+                        <div class="ablogers-slide__play" data-modal="stories-7">
                             <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 3.54549V27.1847C2 28.6063 3.61902 29.5095 4.95233 28.828L28.5615 16.7337C29.7158 16.1427 29.7158 14.5875 28.5615 13.9965L4.95233 1.90215C3.61902 1.22069 2 2.12387 2 3.54549Z" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
                             </svg>                                                              
@@ -883,7 +908,7 @@
                     </div>
                     <div class="ablogers-slide swiper-slide">
                         <img data-src="images/dist/ablogers-img3.png" class="lazyload">
-                        <div class="ablogers-slide__play">
+                        <div class="ablogers-slide__play" data-modal="stories-1">
                             <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 3.54549V27.1847C2 28.6063 3.61902 29.5095 4.95233 28.828L28.5615 16.7337C29.7158 16.1427 29.7158 14.5875 28.5615 13.9965L4.95233 1.90215C3.61902 1.22069 2 2.12387 2 3.54549Z" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
                             </svg>                                                              
@@ -1192,44 +1217,92 @@
         </div>
     </div>
 </div>
-<!-- stories -->
-<div class="modal modal2" id="stories-2">
+<div class="modal" id="stories-2">
     <div class="modal__bg"></div>
     <div class="modal__wrapper">
         <div class="modal__container">
             <button class="modal__close modal-exit">X</button>
-            <video class="stories-video" controls src="stories/video_2022-10-22_10-27-36.mp4"></video>
+            <video class="stories-video" controls src="stories/video_2022-10-22_10-27-48.mp4"></video>
         </div>
     </div>
 </div>
-
-
+<div class="modal" id="stories-3">
+    <div class="modal__bg"></div>
+    <div class="modal__wrapper">
+        <div class="modal__container">
+            <button class="modal__close modal-exit">X</button>
+            <video class="stories-video" controls src="stories/video_2022-10-22_10-27-53.mp4"></video>
+        </div>
+    </div>
+</div>
+<div class="modal" id="stories-4">
+    <div class="modal__bg"></div>
+    <div class="modal__wrapper">
+        <div class="modal__container">
+            <button class="modal__close modal-exit">X</button>
+            <video class="stories-video" controls src="stories/video_2022-10-22_10-27-57.mp4"></video>
+        </div>
+    </div>
+</div>
+<div class="modal" id="stories-5">
+    <div class="modal__bg"></div>
+    <div class="modal__wrapper">
+        <div class="modal__container">
+            <button class="modal__close modal-exit">X</button>
+            <video class="stories-video" controls src="stories/video_2022-10-22_10-28-01.mp4"></video>
+        </div>
+    </div>
+</div>
+<div class="modal" id="stories-6">
+    <div class="modal__bg"></div>
+    <div class="modal__wrapper">
+        <div class="modal__container">
+            <button class="modal__close modal-exit">X</button>
+            <video class="stories-video" controls src="stories/video_2022-10-22_10-28-05.mp4"></video>
+        </div>
+    </div>
+</div>
+<div class="modal" id="stories-7">
+    <div class="modal__bg"></div>
+    <div class="modal__wrapper">
+        <div class="modal__container">
+            <button class="modal__close modal-exit">X</button>
+            <video class="stories-video" controls src="stories/video_2022-10-22_10-28-08.mp4"></video>
+        </div>
+    </div>
+</div>
 
 <!-- youtubes -->
-<div class="modal modal1" id="youtube-1">
+<div class="modal" id="youtube-1">
     <div class="modal__bg"></div>
     <div class="modal__wrapper">
         <div class="modal__container">
             <button class="modal__close modal-exit">X</button>
-            <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/25BkVBgFD9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe id="youtube-video-1" class="youtube-video" width="560" height="315" data-src="https://www.youtube.com/embed/25BkVBgFD9Y" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
 </div>
-<div class="modal modal1" id="youtube-2">
+<div class="modal" id="youtube-2">
     <div class="modal__bg"></div>
     <div class="modal__wrapper">
         <div class="modal__container">
             <button class="modal__close modal-exit">X</button>
-            <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/25BkVBgFD9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe id="youtube-video-1" class="youtube-video" width="560" height="315" data-src="https://www.youtube.com/embed/25BkVBgFD9Y" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<div class="modal" id="youtube-3">
+    <div class="modal__bg"></div>
+    <div class="modal__wrapper">
+        <div class="modal__container">
+            <button class="modal__close modal-exit">X</button>
+            <iframe id="youtube-video-1" class="youtube-video" width="560" height="315" data-src="https://www.youtube.com/embed/25BkVBgFD9Y" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
 </div>
 
 
 
-
-<!-- youtube api -->
-<script src="https://www.youtube.com/iframe_api"></script>
 <!-- lazysizes -->
 <script src='js/lazysizes.min.js'></script>
 <!-- simplebar -->

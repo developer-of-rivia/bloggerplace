@@ -154,7 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				modal.querySelector('.stories-video').play();
 			}
 			if(modal.querySelector('.youtube-video')){
-				modal.querySelector('.youtube-video').classList.remove('youtube-video_hidden');
+				let dataSrc = modal.querySelector('.youtube-video').getAttribute('data-src');
+				modal.querySelector('.youtube-video').src = dataSrc;
 			}
 			const exits = modal.querySelectorAll('.modal-exit');
 			exits.forEach(function (exit) {
@@ -165,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					modal.querySelector('.stories-video').pause();
 				}
 				if(modal.querySelector('.youtube-video')){
-					modal.querySelector('.youtube-video').classList.add('youtube-video_hidden');
+					modal.querySelector('.youtube-video').src = '';
 				}
 			});
 			});
@@ -185,4 +186,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
     
+
 })
